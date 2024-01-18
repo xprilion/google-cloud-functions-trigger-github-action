@@ -51,11 +51,12 @@ def trigger_github_workflow(request):
             try:
                 hn_validated = hn_validate_signature(hn_signature, request_json, actual_secret)
             except:
+                print("HN Verification error")
                 pass
 
         if gh_signature:
             try:
-                gh_validated = gh_verify_signature(request_json, actual_secret, gh_signature)
+                gh_validated = gh_verify_signature(request.data, actual_secret, gh_signature)
             except:
                 pass
 
@@ -80,4 +81,5 @@ def trigger_github_workflow(request):
 
             return {"message": "Whoosh we go!"}
         else:
+
             return {"message": "Your mischief has been logged."}
