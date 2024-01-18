@@ -46,7 +46,7 @@ Replace the placeholder values with your actual GitHub information and credentia
 
 ## Usage
 
-1. **Deploy the Cloud Function**: Follow the instructions in the `deployment` directory to deploy your function to Google Cloud.
+1. **Deploy the Cloud Function**
 
 2. **Triggering the Workflow**: Once deployed, the Cloud Function can be triggered through HTTP requests, Pub/Sub events, or other GCP services, depending on your configuration.
 
