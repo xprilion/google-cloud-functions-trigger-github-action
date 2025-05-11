@@ -102,7 +102,7 @@ def trigger_github_workflow():
 
         try:
             response = requests.post(url, headers=headers, json=payload)
-            logger.info(f"GitHub API response status: {response.status_code}")
+            logger.info(f"GitHub API response: {response.status_code}")
             if response.status_code >= 400:
                 logger.error(f"GitHub API error: {response.text}")
         except Exception as e:
